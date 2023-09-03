@@ -1,0 +1,1248 @@
+@font-face {
+    font-family: billabong;
+    src: url(Billabong.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+
+}
+
+*::selection {
+    background-color: rgb(127, 156, 251);
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+}
+
+.main {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+/* Style for loading screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    /* You can set your preferred background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Ensure it's on top of everything else */
+}
+
+.loader {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    /*background:rgba(20,20,20,0.5);
+    border-radius:50px;*/
+    left: 50%;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+.loader>div {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: rgb(109, 126, 255);
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.loader>div:not(.init) {
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    animation-duration: 2.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.loader>.round1 {
+    animation-name: round1;
+    animation-delay: 0s;
+}
+
+.loader>.round2 {
+    animation-name: round2;
+    animation-delay: .1s;
+}
+
+.loader>.round3 {
+    animation-name: round3;
+    animation-delay: .2s;
+}
+
+.loader>.round4 {
+    animation-name: round4;
+    animation-delay: .3s;
+}
+
+.loader>.round5 {
+    animation-name: round5;
+    animation-delay: .4s;
+}
+
+.loader>.round6 {
+    animation-name: round6;
+    animation-delay: .5s;
+}
+
+.loader>.round7 {
+    animation-name: round7;
+    animation-delay: .9s;
+}
+
+.loader>.round8 {
+    animation-name: round8;
+    animation-delay: .8s;
+}
+
+.loader>.round9 {
+    animation-name: round9;
+    animation-delay: .7s;
+}
+
+.loader>.round10 {
+    animation-name: round10;
+    animation-delay: .6s;
+}
+
+@keyframes round1 {
+
+    0%,
+    55%,
+    100% {
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    5%,
+    50% {
+        margin-left: -10px;
+        margin-top: -50px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes round2 {
+
+    0%,
+    55%,
+    100% {
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    5%,
+    50% {
+        margin-left: 14px;
+        margin-top: -43px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes round3 {
+
+    0%,
+    55%,
+    100% {
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    5%,
+    50% {
+        margin-left: 29px;
+        margin-top: -24px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes round4 {
+
+    0%,
+    55%,
+    100% {
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    5%,
+    50% {
+        margin-left: 29px;
+        margin-top: 0px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes round5 {
+
+    0%,
+    55%,
+    100% {
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    5%,
+    50% {
+        margin-left: 15px;
+        margin-top: 22px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes round6 {
+
+    0%,
+    55%,
+    100% {
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    5%,
+    50% {
+        margin-left: -10px;
+        margin-top: 30px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+@keyframes round7 {
+
+    0%,
+    55%,
+    100% {
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    5%,
+    50% {
+        margin-left: -34px;
+        margin-top: -43px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes round8 {
+
+    0%,
+    55%,
+    100% {
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    5%,
+    50% {
+        margin-left: -49px;
+        margin-top: -24px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes round9 {
+
+    0%,
+    55%,
+    100% {
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    5%,
+    50% {
+        margin-left: -49px;
+        margin-top: 0px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes round10 {
+
+    0%,
+    55%,
+    100% {
+        margin: 0px;
+        width: 0px;
+        height: 0px;
+    }
+
+    5%,
+    50% {
+        margin-left: -35px;
+        margin-top: 22px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* CSS animation for the loader */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hide loading screen when content is loaded */
+.loaded .loading-screen {
+    display: none;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.page1 {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.page1 nav {
+    display: flex;
+    padding: 0 150px;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(233, 233, 233); */
+
+}
+
+.page1 nav h1 {
+    font-family: Billabong;
+    font-size: 35px;
+    font-weight: 599;
+}
+
+.page1 nav .btns {
+    display: flex;
+    gap: 10px;
+}
+
+.page1 nav #search::placeholder {
+    filter: grayscale();
+    mix-blend-mode: hard-light;
+    color: rgb(98, 98, 98);
+}
+
+.page1 nav .menubar {
+    display: none;
+}
+
+.page1 nav #search {
+    border: 1px solid rgb(156, 155, 255);
+    padding: 7px 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 13px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(150, 150, 150, 0.441);
+    border: none;
+    outline: none;
+    background: rgb(239, 239, 239);
+    display: flex;
+    flex-direction: column;
+}
+
+.page1 nav .btns h3 a {
+    text-decoration: none;
+    color: rgb(88, 136, 255);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.page1 nav .btns h3 {
+    display: flex;
+    /* border: 2px solid; */
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border: 1.5px solid rgb(94, 139, 253);
+    border-radius: 5px;
+    cursor: pointer;
+    /* background-color: rgb(239, 239, 239); */
+    text-align: center;
+
+}
+
+.page1 nav .btns button {
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(96, 141, 254);
+}
+
+.container {
+    height: calc(100% - 70px);
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+
+.container .profile {
+    height: 50%;
+    width: 85%;
+    position: relative;
+    background-color: rgb(208, 208, 208);
+    margin-top: 20px;
+    border-radius: 10px;
+    background-image: url(https://img.freepik.com/free-vector/clouds-background-with-stars-text-soace_1017-25499.jpg?w=826&t=st=1693709626~exp=1693710226~hmac=d3324abe4565f84a3b2d72fdb70373ad0a2c1a7f6eb8c92d48f61f6b85271547);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 3px 6px rgba(112, 112, 112, 0.486);
+}
+
+.container .profile .data .profile-image {
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: absolute;
+    left: 8%;
+    outline: 5px solid rgb(129, 171, 255);
+    outline-offset: 3px;
+    background-image: url(images/khushie-img.png);
+    background-size: cover;
+    background-position: top;
+    z-index: 9;
+    /* box-shadow: -2px -3px 5px rgba(0, 0, 0, 0.55); */
+}
+
+.container .profile .data {
+    position: absolute;
+    width: 105%;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid; */
+
+}
+
+.container .profile .data .profile-data {
+    height: 250px;
+    border-radius: 10px;
+    background-color: white;
+    width: 60%;
+    position: absolute;
+    left: 28%;
+    background-color: rgb(255, 255, 255);
+    padding-left: 120px;
+    padding-top: 5px;
+    box-shadow: 3px 4px 5px rgba(102, 102, 102, 0.57);
+
+}
+
+.container .profile .data .profile-data .profile-data-text h1 {
+    font-size: 35px;
+    display: flex;
+    align-items: start;
+
+}
+
+
+.container .profile .data .profile-data .profile-data-text h1 span {
+    background-color: rgb(255, 233, 106);
+    cursor: none;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 3px;
+    border-radius: 5px;
+    margin-left: 3px;
+
+}
+
+.container .profile .data .profile-data .profile-data-text h4 {
+    font-size: 15px;
+    color: grey;
+
+}
+
+.container .profile .data .profile-data .profile-data-text .counts {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    /* background: red; */
+}
+
+.container .profile .data .profile-data .profile-data-text div.counts a .btn:hover {
+    cursor: pointer;
+    background-color: rgb(150, 149, 149);
+}
+
+.container .profile .data .profile-data .profile-data-text div.counts a {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .profile .data .profile-data .profile-data-text .counts a button {
+    background-color: rgb(98, 150, 255);
+    border-radius: 5px;
+    border: none;
+    color: rgb(235, 235, 235);
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+.profile-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 22px;
+}
+
+.container .profile .data .profile-data .profile-data-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.container .profile .data .profile-data .profile-data-links a {
+    border: 1px solid rgb(88, 151, 253);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    padding: 5px;
+    background-color: rgb(94, 139, 253);
+}
+
+.profile-data-links a i {
+    height: 30px;
+    width: 30px;
+}
+
+.profile-data-links a .icon {
+    color: white;
+}
+
+.container .profile .data .profile-data .profile-data-text .role {
+    margin-top: 5px;
+
+}
+
+.container .profile .data .profile-data .profile-data-text .role h3:last-child {
+    border: none;
+}
+
+.container .profile .data .profile-data .profile-data-text .role h3:first-child {
+    padding-left: 0;
+}
+
+.container .profile .data .profile-data .profile-data-text .role h3 {
+    font-size: 15px;
+    border-right: 4px double rgb(98, 98, 98);
+    display: inline;
+    color: rgb(98, 98, 98);
+    /* padding-right: 10px; */
+    padding: 0px 10px;
+
+}
+
+.container .profile .data .profile-data .profile-data-text p {
+    font-size: 15px;
+    color: rgb(34, 34, 34);
+    padding-right: 45px;
+    padding-top: 15px;
+}
+
+.container .profile .data .profile-data .profile-data-text p:last-child {
+    display: inline;
+    padding: 0;
+    color: grey;
+}
+
+
+.page2 {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: rgb(255, 93, 93); */
+
+}
+
+.page2 .marquee-section {
+    z-index: 55;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.page2 .marquee-horizontal {
+    z-index: 200;
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.page2 .track-horizontal {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee-horizontal 20s linear infinite;
+    overflow: hidden;
+}
+
+.page2 .carousel-pill {
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(98, 150, 255);
+    border: 1px solid rgb(77, 136, 255);
+    border-radius: 4px;
+    flex: none;
+    padding: 8px 18px;
+    font-size: 13px;
+    display: inline-block;
+    color: white;
+    margin: 5px;
+}
+
+.page2 .track-horizontal-alt {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee-horizontal-alt 20s linear infinite;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.page2 .techs .heading {
+    text-align: center;
+    margin-top: 25px;
+    position: relative;
+}
+
+.page2 .techs .tech-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    flex-direction: column;
+}
+
+.page2 .techs .tech-box {
+    /* height: 230px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    /* border: 1px solid; */
+}
+
+/* .page2 .techs .tech-box img{
+    height: 60px;
+} */
+.page2 .techs .tech-box h1 {
+    /* padding-bottom: 15px; */
+    height: 100%;
+    width: 120px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.page2 .techs .tech-box .about-tech {
+    padding-left: 50px;
+    display: flex;
+    /* border: 1px solid; */
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page2 .techs .tech-box .slider {
+    width: 250px;
+    height: 7px;
+    position: relative;
+    background-color: rgb(193, 193, 193);
+    box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.529);
+    border-radius: 10px;
+}
+
+.page2 .techs .tech-box .slider .know img {
+    height: 20px;
+    position: absolute;
+    right: -10px;
+    top: -100%;
+    cursor: pointer;
+    filter: drop-shadow(2px 3px 2px rgba(72, 72, 72, 0.721));
+}
+
+.page2 .techs .tech-box .slider .know {
+    border-radius: 10px;
+    position: absolute;
+    background: linear-gradient(to left, rgb(82, 129, 248), rgb(130, 166, 255));
+    width: 40%;
+    height: 7px;
+}
+
+.page2 .techs .tech-box .html-slider .know {
+    width: 90%;
+}
+
+.page2 .techs .tech-box .css-slider .know {
+    width: 75%;
+}
+
+.page2 .techs .tech-box .js-slider .know {
+    width: 70%;
+}
+
+.page2 .techs .tech-box .react-slider .know {
+    width: 55%;
+}
+
+.page2 .techs .tech-box .bootstrap-slider .know {
+    width: 85%;
+}
+
+.page2 .techs .tech-box .tlcss-slider .know {
+    width: 70%;
+}
+
+.page2 .techs .tech-box .vite-slider .know {
+    width: 60%;
+}
+
+.page3 {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(251, 65, 65);
+
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    width: 100%;
+
+}
+
+footer .ft {
+    border-radius: 20px;
+    height: 60%;
+    width: 70%;
+    background-image: url(https://bisht-dev.netlify.app/static/media/illustration.853e3ef7b904aec216ba.webp);
+    background-size: cover;
+    background-position: center;
+    /* margin-bottom: 70px; */
+    padding-left: 50px;
+}
+
+footer .ft h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-top: 50px;
+}
+
+footer .ft p {
+    font-size: 13px;
+    padding-right: 500px;
+}
+
+footer .ft button a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .ft button {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(113, 153, 255);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 7px;
+    gap: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.page4 {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: rgb(251, 41, 41); */
+
+}
+
+.page4 .project-heading {
+    text-align: center;
+    margin: 20px;
+}
+
+.page4 .project-box {
+    /* border: 1px solid; */
+    height: 80%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.page4 .project-box .project {
+    border: 1px solid;
+    overflow: hidden;
+    height: 400px;
+    width: 280px;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.page4 .project-box .project p {
+    font-size: 12px;
+    padding: 8px;
+    padding-left: 20px;
+
+}
+
+.page4 .project-box .project .watch {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    /* align-items: center;
+        justify-content: center; */
+    width: 100%;
+}
+
+.page4 .project-box .project .watch h3 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: none;
+}
+
+.page4 .project-box .project h3 a {
+    font-size: 12px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background-color: rgb(127, 156, 251);
+    height: 100%;
+}
+
+.page4 .project-box .project .watch h3 {
+    display: flex;
+    align-items: center;
+}
+
+.page4 .project-box .project .watch h3>a {
+    color: rgb(57, 57, 57);
+    text-decoration: none;
+
+}
+
+.page4 .project-box .project .watch h3 a .code-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.page4 .project-box .project h1 {
+    font-size: 20px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.page4 .project-box .project:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 19px 3px rgb(25, 25, 25);
+}
+
+.page4 .project-box .project1 .project-img {
+    overflow: hidden;
+    height: 200px;
+    background-image: url(images/game.png);
+    background-position: bottom;
+    background-size: cover;
+    border-bottom: 1px solid rgb(0, 0, 0);
+
+}
+
+.page4 .project-box .project2 .project-img {
+    overflow: hidden;
+    height: 200px;
+    background-image: url(images/igram.png);
+    background-position-x: left;
+    background-size: cover;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.page4 .project-box .project3 .project-img {
+    overflow: hidden;
+    height: 200px;
+    background-image: url(images/shiksha.png);
+    background-position-x: left;
+    background-size: cover;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.page4 .project-box .project4 .project-img {
+    overflow: hidden;
+    height: 200px;
+    background-image: url(images/music.png);
+    background-position: center;
+    background-size: cover;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+@media (max-width:600px) {
+    .page1 nav {
+        height: 50px;
+        padding: 5px 20px;
+
+    }
+
+    .page1 nav h1 {
+        font-size: 27px;
+    }
+
+    .page1 nav #search {
+        width: 140px;
+        padding: 4px 5px;
+        font-size: 13px;
+        margin-left: 100px;
+
+    }
+    .page1{
+        height: 120vh;
+    }
+   .page2 .marquee-section{
+        font-size: 12px;
+    }
+
+
+    .page1 nav .btns {
+        overflow: hidden;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+        border-radius: 10px;
+        z-index: 99;
+        width: 90%;
+        background-color: white;
+        border: 1px solid rgb(186, 186, 186);
+        padding: 20px;
+        flex-direction: column;
+        display: none;
+        /*            justify-content: space-between;*/
+    }
+
+    .page1 nav .btns button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .page1 nav .menubar {
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .container {
+        height: calc(100% - 50px);
+    }
+
+    .container .profile {
+        height: 30%;
+    }
+
+    .container .profile .data {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .container .profile .data .profile-image {
+        height: 160px;
+        width: 160px;
+        left: 50%;
+        transform: translateX(-50%);
+        outline: 3px solid rgb(129, 171, 255);
+    }
+
+    .container .profile .data .profile-data {
+        position: absolute;
+        padding-left: 20px;
+        top: 60%;
+        height: 430px;
+        width: 100%;
+        left: 0;
+        padding-top: 70px;
+        box-shadow: 1px 1px 7px black;
+        margin: 0;
+        padding-right: 40px;
+          overflow: hidden;
+    }
+
+    .container .profile .data .profile-data .profile-data-text h4 {
+        font-size: 13px;
+    }
+    .container .profile .data .profile-data .profile-data-text h1 {
+        font-size: 23px;
+        width: 100%;
+    }
+    .container .profile .data .profile-data .profile-data-text .counts{
+        flex-wrap: wrap;
+    }
+
+    .container .profile .data .profile-data .profile-data-text h1 span {
+        font-size: 8px;
+        text-align: center;    }
+        
+        .container .profile .data .profile-data .profile-data-text .role h3 {
+            font-size: 13px;
+        
+        }
+        .page2 .heading{
+            font-size: 23px;
+
+        }
+        .page2 .techs .tech-container .tech-box h1{
+            font-size: 15px;
+            text-align: center;
+            width: 30%;
+
+            /* width: fit-content; */
+        margin: 0;
+        padding-left: 20px;
+    }
+    .page2 .techs .tech-box .about-tech .know {
+        position: absolute;
+        height: 5px;
+
+        }
+     
+        .page2 .techs .tech-box .slider {
+            max-width: 200px;
+            position: relative;
+            height: 5px;
+            
+        }
+        /* .page2 .techs .tech-box .slider {
+            position: relative;
+            background-color: rgb(193, 193, 193);
+            box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.529);
+            border-radius: 10px;
+            height: 3px;
+            width: 200px;
+            align-self: center;
+        }
+        /* .page2 .techs .tech-container .tech-box .about-tech{ .slider{} */
+        .page2 .techs .tech-box{
+          width: 95vw;
+            display: flex;
+            /* align-items: center; */
+            gap: 0;
+            justify-content: start;
+            padding: 0;
+            margin: 0;
+        }
+        .page2 .techs .tech-box .about-tech{
+            max-width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            margin-left: 10%;
+            /* margin: 0; */
+            padding: 0;
+        } 
+        
+.page2 .techs .tech-box .html-slider .know {
+    max-width: 90%;
+}
+
+.page2 .techs .tech-box .css-slider .know {
+     max-width: 75%;
+}
+
+.page2 .techs .tech-box .js-slider .know {
+     max-width: 70%;
+}
+
+.page2 .techs .tech-box .react-slider .know {
+     max-width: 55%;
+}
+
+.page2 .techs .tech-box .bootstrap-slider .know {
+     max-width: 85%;
+}
+
+.page2 .techs .tech-box .tlcss-slider .know {
+     max-width: 70%;
+}
+
+.page2 .techs .tech-box .vite-slider .know {
+     max-width: 60%;
+}
+.page4 .project-box{
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.page4 .project-heading{
+    font-size: 26px;
+    padding-bottom: 20px;
+}
+.page4 .project-box .project:hover{
+    transform: scale(1.01);
+}
+.page4 .project-box .project{
+    width: 300px;
+}
+.page4 .project-box .project h1{
+    font-size: 20px;
+    padding: 0;
+}
+footer{
+    height:40vh;
+}
+footer .ft{
+    height: 80%;
+background-position-y: bottom;
+
+background-position-x:right;
+    padding: 10px;
+    width: 90%;
+}
+footer .ft h1{
+    padding-top: 5px;
+    font-size: 23px;
+color: rgb(52, 50, 50);
+background-color: rgba(224, 224, 224, 0.236);
+backdrop-filter: blur(4px);
+border-radius: 5px;
+}
+footer .ft p{
+    padding: 0;
+    background-color: rgba(224, 224, 224, 0.236);
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+}
+.page4{
+    height: max-content;
+    padding-bottom: 50px;
+}
+}
